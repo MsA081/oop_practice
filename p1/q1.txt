@@ -1,0 +1,73 @@
+Student and Course Registration and Teacher
+Design a class called Person with the following attributes:
+• name (string): representing the name of the person.
+• age (int): representing the age of the person.
+• address (string): representing the address of the person.
+Design a class called Student that inherits from Person
+Attributes:
+• student_id (string): representing the unique identifier of the student.
+• email (string): representing the email address of the student.
+Methods:
+• change_email: Change the student's email address to a new one.
+• display_info: Display the student's information, including name, age,
+address, student ID, and email.
+Design a class called Teacher that inherits from Person
+Attributes:
+• teacher_id (string): representing the unique identifier of the teacher.
+• subject (string): representing the subject taught by the teacher.
+Methods:
+• change_subject: Change the subject taught by the teacher to a new one.
+• display_info: Display the teacher's information, including name, age,
+address, teacher ID, and subject.Design a class called Course with the following attributes and methods:
+Attributes:
+• name (string): representing the name of the course.
+• students (list of Student objects): representing the students enrolled in
+the course.
+• teacher (Teacher object): representing the teacher of the course.
+Methods:
+• add_student: Add a student to the course by providing the Student
+object as a parameter.
+• remove_student: Remove a student from the course by providing the
+Student object as a parameter.
+• set_teacher: Assign a teacher to the course by providing the Teacher
+object as a parameter.
+• display_info(): Display the name of the course, the teacher's name, and
+the list of students in the course.
+
+
+
+ثبت نام دانشجو و دوره و مدرس
+کلاسی به نام Person با ویژگی های زیر طراحی کنید:
+• نام (رشته): نشان دهنده نام شخص است.
+• سن (int): نشان دهنده سن فرد است.
+• آدرس (رشته): نشان دهنده آدرس شخص است.
+کلاسی به نام Student طراحی کنید که از Person ارث می برد
+ویژگی های:
+• student_id (رشته): نشان دهنده شناسه منحصر به فرد دانش آموز است.
+• ایمیل (رشته): نشان دهنده آدرس ایمیل دانش آموز است.
+مواد و روش ها:
+• change_email: آدرس ایمیل دانش آموز را به آدرس جدید تغییر دهید.
+• display_info: نمایش اطلاعات دانش آموز، از جمله نام، سن،
+آدرس، شناسه دانشجویی و ایمیل.
+کلاسی به نام Teacher طراحی کنید که از Person ارث می برد
+ویژگی های:
+• teacher_id (رشته): نشان دهنده شناسه منحصر به فرد معلم است.
+• موضوع (رشته): نشان دهنده موضوع تدریس شده توسط معلم است.
+مواد و روش ها:
+• change_subject: موضوع تدریس شده توسط معلم را به موضوع جدیدی تغییر دهید.
+• display_info: نمایش اطلاعات معلم، از جمله نام، سن،
+آدرس، شناسه معلم و موضوع. کلاسی به نام Course با ویژگی ها و متدهای زیر طراحی کنید:
+ویژگی های:
+• نام (رشته): نشان دهنده نام دوره.
+• دانش آموزان (لیست اشیاء دانشجو): نشان دهنده دانش آموزانی است که در آن ثبت نام کرده اند
+دوره.
+• معلم (شیء معلم): به نمایندگی از معلم دوره.
+مواد و روش ها:
+• add_student: با ارائه دانشجو، دانشجو را به دوره اضافه کنید
+شی به عنوان یک پارامتر
+• remove_student: حذف دانش آموز از دوره با ارائه
+شی دانش آموز به عنوان یک پارامتر.
+• set_teacher: با ارائه معلم، معلمی را به دوره اختصاص دهید
+شی به عنوان یک پارامتر
+• display_info(): نمایش نام دوره، نام استاد و
+لیست دانشجویان در دوره
