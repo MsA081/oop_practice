@@ -1,0 +1,46 @@
+13. BankAccount and Bank
+Design a class called BankAccount with the following attributes and methods:
+Attributes:
+• account_number (string): representing the account number.
+• balance (float): representing the current balance of the account.
+Methods:
+• __init__: Initialize the attributes.
+• deposit: Add the given amount to the account's balance.
+• withdraw: Subtract the given amount from the account's balance.
+• display_balance: Display the current balance of the account.
+Design a class called Bank with the following attributes and methods:
+Attributes:
+• name (string): representing the name of the bank.
+• accounts (list of BankAccounts): representing the bank accounts.
+Methods:
+• __init__(self, name): Initialize the attributes.
+• create_account: Create a new bank account with the given account
+number and initial deposit.
+• close_account: Close a bank account with the given account number.
+• update_balance: Update the balance of a bank account by adding or
+subtracting the given amount.
+• display_accounts: Display the information of all the bank accounts.
+
+
+13. حساب بانکی و بانک
+کلاسی به نام BankAccount با ویژگی ها و متدهای زیر طراحی کنید:
+ویژگی های:
+• account_number (رشته): نشان دهنده شماره حساب است.
+• موجودی (شناور): نشان دهنده موجودی جاری حساب است.
+مواد و روش ها:
+• __init__: صفات را مقداردهی اولیه کنید.
+• سپرده: مبلغ داده شده را به موجودی حساب اضافه کنید.
+• برداشت: مبلغ داده شده را از موجودی حساب کم کنید.
+• display_balance: موجودی فعلی حساب را نمایش می دهد.
+کلاسی به نام Bank با ویژگی ها و متدهای زیر طراحی کنید:
+ویژگی های:
+• نام (رشته): نشان دهنده نام بانک.
+• حساب ها (فهرست حساب های بانکی): نشان دهنده حساب های بانکی است.
+مواد و روش ها:
+• __init__(self, name): صفات را مقدار دهی اولیه کنید.
+• create_account: یک حساب بانکی جدید با حساب داده شده ایجاد کنید
+شماره و واریز اولیه
+• close_account: یک حساب بانکی را با شماره حساب داده شده ببندید.
+• update_balance: موجودی حساب بانکی را با افزودن یا به روز کنید
+کم کردن مقدار داده شده
+• display_accounts: نمایش اطلاعات تمام حساب های بانکی.
