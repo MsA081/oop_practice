@@ -1,0 +1,48 @@
+12. Product Inventory
+Design a class called Product with the following attributes and methods:
+Attributes:
+• name (string): representing the name of the product.
+• price (float): representing the price of the product.
+• quantity (integer): representing the quantity of the product in stock.
+Methods:
+• __init__: Initialize the attributes.
+• sell: Update the quantity of the product after a sale.
+• restock: Update the quantity of the product after restocking.
+• display_info: Display the name, price, and quantity of the product.
+Design a class called Inventory with the following attributes and methods:
+Attributes:
+• products (list of Product objects): representing the products in the
+inventory.
+Methods:
+• __init__: Initialize the attributes. If no products are provided, create an
+empty list.
+• add_product: Add a product to the inventory.
+• update_product: Update the price of a product in the inventory.
+• delete_product: Delete a product from the inventory.
+• read_inventory: Display the information of all the products in the
+inventory.
+
+
+12. موجودی محصول
+کلاسی به نام Product با ویژگی ها و متدهای زیر طراحی کنید:
+ویژگی های:
+• نام (رشته): نشان دهنده نام محصول است.
+• قیمت (شناور): نشان دهنده قیمت محصول است.
+• مقدار (عدد صحیح): نشان دهنده مقدار محصول موجود در انبار است.
+مواد و روش ها:
+• __init__: صفات را مقداردهی اولیه کنید.
+• sell: مقدار محصول را پس از فروش به روز کنید.
+• ذخیره مجدد: مقدار محصول را پس از ذخیره مجدد به روز کنید.
+• display_info: نمایش نام، قیمت و مقدار محصول.
+کلاسی به نام Inventory با ویژگی ها و متدهای زیر طراحی کنید:
+ویژگی های:
+• محصولات (لیست اشیاء محصول): نشان دهنده محصولات موجود در
+فهرست.
+مواد و روش ها:
+• __init__: صفات را مقداردهی اولیه کنید. اگر هیچ محصولی ارائه نشد، ایجاد کنید
+لیست خالی
+• add_product: یک محصول را به موجودی اضافه کنید.
+• update_product: به روز رسانی قیمت یک محصول در موجودی.
+• delete_product: حذف یک محصول از موجودی.
+• read_inventory: نمایش اطلاعات تمام محصولات در
+فهرست.
