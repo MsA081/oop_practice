@@ -34,4 +34,3 @@ class Bank:
 
     def display_accounts(self):
         print(f"Bank Accounts : {self.accounts}")
-
