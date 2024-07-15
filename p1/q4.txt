@@ -1,0 +1,46 @@
+11. Library Catalog
+Design a class called Book with the following attributes and methods:
+Attributes:
+• title (string): representing the title of the book.
+• author (string): representing the author of the book.
+• is_available (boolean): representing the availability of the book.
+Methods:
+• __init__: Initialize the attributes.
+• display_info: Display the title, author, and availability of the book.
+• check_out: Update the availability of the book to False.
+• check_in: Update the availability of the book to True.
+Design a class called Library with the following attributes and methods:
+Attributes:
+• name (string): representing the name of the library.
+• books (list of Books): representing the collection of books in the library.
+Methods:
+• __init__: Initialize the attributes.
+• add_book: Add a book to the library's collection.
+• remove_book: Remove a book from the library's collection.
+• search_book: Search for a book by title in the library's collection.
+• display_books: Display the information of all the books in the library.
+
+
+
+
+11. فهرست کتابخانه
+یک کلاس به نام Book با ویژگی ها و متدهای زیر طراحی کنید:
+ویژگی های:
+• عنوان (رشته): نشان دهنده عنوان کتاب.
+• نویسنده (رشته): به نمایندگی از نویسنده کتاب.
+• is_available (بولی): نشان دهنده در دسترس بودن کتاب.
+مواد و روش ها:
+• __init__: صفات را مقداردهی اولیه کنید.
+• display_info: عنوان، نویسنده و در دسترس بودن کتاب را نمایش دهید.
+• check_out: در دسترس بودن کتاب را به False به روز کنید.
+• check_in: در دسترس بودن کتاب را به True به روز کنید.
+کلاسی به نام Library با ویژگی ها و متدهای زیر طراحی کنید:
+ویژگی های:
+• نام (رشته): نشان دهنده نام کتابخانه است.
+• کتابها (فهرست کتابها): معرف مجموعه کتابهای موجود در کتابخانه است.
+مواد و روش ها:
+• __init__: صفات را مقداردهی اولیه کنید.
+• add_book: یک کتاب را به مجموعه کتابخانه اضافه کنید.
+• remove_book: یک کتاب را از مجموعه کتابخانه حذف کنید.
+• search_book: جستجوی یک کتاب بر اساس عنوان در مجموعه کتابخانه.
+• display_books: نمایش اطلاعات تمام کتاب های موجود در کتابخانه.
