@@ -6,74 +6,117 @@ class Person:
 
 
 class Student(Person):
-    def __init__(self, student_id, email, name, age, address):
+    def __init__(self, name, age, address, id_student, email):
         super().__init__(name, age, address)
-        self.student_id = student_id
-        self.email = email
+        self.id_student = id_student
+        self._email = email
 
     @property
-    def change_email(self):
-        return self.email
+    def email(self):
+        return self._email
 
-    @change_email.setter
-    def change_email(self, new_email):
-        self.email = new_email
+    @email.setter
+    def email(self, new_email):
+        self._email = new_email
 
     def display_info(self):
-        print(f"Student ID: {self.student_id}\t"
-              f"student_email: {self.email}\t"
-              f"name: {self.name}\t"
-              f"age: {self.age}\t"
-              f"address: {self.address}")
+        return f"""students_details:\n
+                   name : {self.name}\n
+                   age : {self.age}\n
+                   address : {self.address}\n
+                   id_student : {self.id_student}\n
+                   email : {self.email}"""
 
 
 class Teacher(Person):
-    def __init__(self, teacher_id, subject, name, age, address):
+    def __init__(self, name, age, address, id_teacher, subject):
         super().__init__(name, age, address)
-        self.teacher_id = teacher_id
-        self.subject = subject
+        self.id_teacher = id_teacher
+        self._subject = subject
 
     @property
-    def change_subject(self):
-        return self.subject
+    def subject(self):
+        return self._subject
 
-    @change_subject.setter
-    def change_subject(self, new_subject):
-        self.subject = new_subject
+    @subject.setter
+    def subject(self, new_subject):
+        self._subject = new_subject
 
     def display_info(self):
-        print(f"Student ID: {self.teacher_id}"
-              f"student_email: {self.subject}"
-              f"name: {self.name}"
-              f"age: {self.age}"
-              f"address: {self.address}")
+        return f"""teacher_details:\n
+                   name : {self.name}\n
+                   age : {self.age}\n
+                   address : {self.address}\n
+                   id_teacher : {self.id_teacher}\n
+                   subject : {self.subject}"""
 
 
 class Course:
-    def __init__(self, course_name, students, teacher):
-        self.course_name = course_name
-        self.students = list(students)
-        self.teacher = teacher
+    def __init__(self, name, teacher):
+        self.name = name
+        self._students = []
+        self._teacher = teacher
 
-    def add_student(self, student_name):
-        self.students.append(student_name)
-        return self.students
+    @property
+    def students(self):
+        return self._students
 
-    def remove_student(self, student_name):
-        for student in self.students:
-            if student == student_name:
-                self.students.remove(student_name)
-                return True
+    def add_student(self, student):
+        if student not in self._students:
+            self._students.append(student)
+
+    def remove_student(self, student):
+        if student in self._students:
+            self._students.remove(student)
 
     @property
     def teacher(self):
-        return self.teacher
+        return self._teacher
 
     @teacher.setter
     def teacher(self, teacher):
-        self.teacher = teacher
+        self._teacher = teacher
 
     def display_info(self):
-        print(f"Course: {self.course_name}"
-              f"students: {self.students}"
-              f"teacher: {self.teacher}")
+        return f"""course_details:\n
+                   name : {self.name}\n
+                   teacher : {self.teacher.name}\n
+                   students : {[student.name for student in self.students]}"""
+
+
+# تست کردن پیاده‌سازی
+s1 = Student('Ali', 23, "Tehran", 1, "ali@gmail.com")
+s2 = Student('Sara', 22, "Shiraz", 2, "sara@gmail.com")
+s3 = Student('Reza', 24, "Mashhad", 3, "reza@gmail.com")
+s4 = Student('Neda', 21, "Isfahan", 4, "neda@gmail.com")
+
+t1 = Teacher('Mr. Smith', 40, "New York", 101, "Mathematics")
+t2 = Teacher('Mrs. Johnson', 35, "Los Angeles", 102, "Physics")
+
+c1 = Course("Math 101", t1)
+c2 = Course("Physics 101", t2)
+
+# اضافه کردن دانشجو به دوره‌ها
+c1.add_student(s1)
+c1.add_student(s2)
+c2.add_student(s3)
+c2.add_student(s4)
+
+# نمایش اطلاعات دوره‌ها
+print(c1.display_info())
+print(c2.display_info())
+
+# به‌روزرسانی ایمیل یکی از دانشجویان
+s1.email = "ali_new@gmail.com"
+print(s1.email)
+
+# حذف دانشجو از یک دوره
+c1.remove_student(s1)
+print(c1.display_info())
+
+# اضافه کردن دانشجوی بیشتر به دوره‌ها
+c1.add_student(s3)
+c2.add_student(s1)
+
+print(c1.display_info())
+print(c2.display_info())
