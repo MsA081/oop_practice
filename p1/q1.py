@@ -6,9 +6,8 @@ class Person:
 
 
 class Student(Person):
-
     def __init__(self, student_id, email, name, age, address):
-        super.__init__(name, age, address)
+        super().__init__(name, age, address)
         self.student_id = student_id
         self.email = email
 
@@ -21,17 +20,16 @@ class Student(Person):
         self.email = new_email
 
     def display_info(self):
-        print(f"Student ID: {self.student_id}"
-              f"student_email: {self.email}"
-              f"name: {self.name}"
-              f"age: {self.age}"
+        print(f"Student ID: {self.student_id}\t"
+              f"student_email: {self.email}\t"
+              f"name: {self.name}\t"
+              f"age: {self.age}\t"
               f"address: {self.address}")
 
 
 class Teacher(Person):
-
     def __init__(self, teacher_id, subject, name, age, address):
-        super.__init__(name, age, address)
+        super().__init__(name, age, address)
         self.teacher_id = teacher_id
         self.subject = subject
 
@@ -52,7 +50,7 @@ class Teacher(Person):
 
 
 class Course:
-    def __init__(self, course_name, *students, teacher):
+    def __init__(self, course_name, students, teacher):
         self.course_name = course_name
         self.students = list(students)
         self.teacher = teacher
@@ -79,4 +77,3 @@ class Course:
         print(f"Course: {self.course_name}"
               f"students: {self.students}"
               f"teacher: {self.teacher}")
-
