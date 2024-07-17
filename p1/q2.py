@@ -15,7 +15,6 @@ class BankAccount:
     def display_balance(self):
         print(f"Account {self.account_number} Balance: {self.balance}")
 
-
 class Bank:
     def __init__(self, name):
         self.name = name
@@ -43,23 +42,23 @@ class Bank:
         else:
             print("No accounts in the bank.")
 
-# نمونه سازی و استفاده از کلاس‌های بانک و حساب بانکی
+# Instantiate and use the Bank and BankAccount classes
 my_bank = Bank("MyBank")
 
-# ایجاد حساب‌های بانکی
+# Create bank accounts
 my_bank.create_account(1001, 500)
 my_bank.create_account(1002, 1000)
 
-# نمایش حساب‌های بانکی
+# Display all bank accounts
 my_bank.display_accounts()
 
-# سپرده‌گذاری و برداشت از حساب
+# Deposit and withdraw from accounts
 my_bank.accounts[1001].deposit(200)
 my_bank.accounts[1001].display_balance()
 
 my_bank.accounts[1002].withdraw(300)
 my_bank.accounts[1002].display_balance()
 
-# بستن حساب بانکی
+# Close a bank account
 my_bank.close_account(1001)
 my_bank.display_accounts()
