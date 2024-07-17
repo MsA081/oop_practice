@@ -1,42 +1,76 @@
-from itertools import product
-
-
 class Product:
     def __init__(self, name, price, quantity):
         self.name = name
         self.price = price
         self.quantity = quantity
 
-    def sell(self):
-        self.quantity = 0
+    def sell(self, quantity_sell):
+        self.quantity -= quantity_sell
 
-    def restock(self, quantity):
-        self.quantity += quantity
+    def restock(self, quantity_restock):
+        self.quantity += quantity_restock
 
     def display_info(self):
         print(f"Name: {self.name}, Price: {self.price}, Quantity: {self.quantity}")
 
 
 class Inventory:
-    price = 0
+    def __init__(self):
+        self.products = []
 
-    def __init__(self, *products):
-        self.products = list(products)
+    def add_product(self, product_name, price, quantity):
+        for product1 in self.products:
+            if product1["product_name"] == product_name:
+                print(f"Product {product_name} already exists.")
+                return
+        self.products.append({"product_name": product_name, "price": price, "quantity": quantity})
+        print(f"Product {product_name} added.")
 
-    def add_product(self, product):
-        if product not in self.products:
-            self.products.append(product)
+    def remove_product(self, product_name):
+        for product1 in self.products:
+            if product1["product_name"] == product_name:
+                self.products.remove(product1)
+                print(f"Product {product_name} removed.")
+                return
+        print(f"Product {product_name} not found.")
 
-    def remove_product(self):
-        if product in self.products:
-            self.products.remove(product)
-
-    @staticmethod
-    def update_product(self, new_price):
-        Inventory.price += new_price
+    def update_product(self, product_name, price, quantity):
+        for product1 in self.products:
+            if product1["product_name"] == product_name:
+                product1["price"] = price
+                product1["quantity"] = quantity
+                print(f"Product {product_name} updated.")
+                return
+        print(f"Product {product_name} not found.")
 
     def read_inventory(self):
-        print(f"Inventory: {self.products}")
+        if self.products:
+            print("Inventory:")
+            for product in self.products:
+                print(f"Name: {product['product_name']}, Price: {product['price']}, Quantity: {product['quantity']}")
+        else:
+            print("Inventory is empty.")
 
 
+# Instantiate and use the Inventory and Product classes
+inventory = Inventory()
+
+# Add products to the inventory
+inventory.add_product("Apple", 0.5, 100)
+inventory.add_product("Banana", 0.3, 150)
+
+# Display the inventory
+inventory.read_inventory()
+
+# Update a product's price and quantity
+inventory.update_product("Apple", price=0.6, quantity=120)
+
+# Display the updated inventory
+inventory.read_inventory()
+
+# Remove a product from the inventory
+inventory.remove_product("Banana")
+
+# Display the updated inventory
+inventory.read_inventory()
 
